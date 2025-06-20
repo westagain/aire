@@ -1,0 +1,28 @@
+{
+  "name": "aire",
+  "version": "1.0.0",
+  "description": "**Reading AIRE** is an intelligent reading companion built for immersive, context-aware engagement with literature, philosophy, history, and human thought. It is not a chatbot or search engine. It is a system designed to accompany readers as they move through longform texts, offering insight without intrusion, relevance without disruption, and presence without spectacle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@motionone/react": "^10.16.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "babel-loader": "^10.0.0",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}

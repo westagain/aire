@@ -1,0 +1,42 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+  <div class="section">
+    <h2>Reading AIRE’s Choice</h2>
+    <div class="book-carousel" id="choice-slider">
+      {% for page in aire_choice_pages %}
+        <div class="slide{% if forloop.first %} active{% endif %}">
+          <div class="book-grid">
+            {% for book in page %}
+              <div class="book-card">
+                <img src="{{ book.cover }}" alt="{{ book.title }}">
+                <h3>{{ book.title }}</h3>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="dots" id="choice-dots"></div>
+  </div>
+
+  <div class="section">
+    <h2>Recommendations</h2>
+    <div class="book-carousel" id="recs-slider">
+      {% for group in recs_pages %}
+        <div class="slide{% if forloop.first %} active{% endif %}">
+          <div class="genre-title">{{ group.genre }}</div>
+          <div class="book-grid">
+            {% for book in group.books %}
+              <div class="book-card">
+                <img src="{{ book.cover }}" alt="{{ book.title }}">
+                <h3>{{ book.title }}</h3>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="dots" id="recs-dots"></div>
+  </div>
+{% endblock %}
